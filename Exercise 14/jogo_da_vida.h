@@ -16,10 +16,10 @@ class JogoDaVida {
   JogoDaVida(int l, int c);
 
   // Retorna o número de linhas do torus.
-  int linhas() {return vivas_.size();};
+  int linhas();
 
   // Retorna o número de colunas do torus.
-  int colunas() {return vivas_[0].size();};
+  int colunas();
 
   // Retorna o estado da célula [i, j].
   bool viva(int i, int j);
