@@ -54,9 +54,9 @@ int main() {
       catch(ChaveInexistente e) {
       cout << "Não foi possível realizar a operação: A chave "  << e.chave << " não está no dicionário" << endl;
      }
-      } else {
+    } else {
         return 0;
-      }
+    }
   }
 }
 
