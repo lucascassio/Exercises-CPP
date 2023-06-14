@@ -2,14 +2,26 @@
 
 #include <iostream>
 
+using namespace std;
+
 void GooglePassword::insert(const std::string& url,
                             const std::string& login,
                             const std::string& password) {
-  // TODO: Implemente este metodo
-}
+
+    if(validPassword(password)) {
+      Usuario NovoUsuario{login, password};
+      string novaUrl = url;
+      passwords_.insert({novaUrl, NovoUsuario});
+    }
+ }
 
 void GooglePassword::remove(const std::string& url) {
-  // TODO: Implemente este metodo
+    for(auto it = passwords_.begin(); it != passwords_.end(); it++) {
+        if(it -> first == url) {
+          passwords_.erase(it);
+          return;
+        }
+    }
 }
 
 
@@ -24,7 +36,17 @@ void GooglePassword::update(const std::string& url,
    * atualizados se a senha armazenada no sistema for igual a old_password.
    * Nao esqueca de verificar se o novo password tambem e valido.
    */
+  for(auto it = passwords_.begin(); it != passwords_.end(); it++) {
+    if(it -> first == url) {
+      if(it -> second.password == old_password && validPassword(new_password)) {
+      it -> second.login = login;
+      it -> second.password = new_password;
+    }
+  }
 }
+}
+
+
 
 void GooglePassword::printPasswords() {
   // TODO: Implemente este metodo
@@ -36,9 +58,40 @@ void GooglePassword::printPasswords() {
    * zzz.site.com: login and password
    *
    */
+
+  int aux = 0;
+
+  for(auto it = passwords_.begin(); it != passwords_.end(); it++) {
+    aux++;
+  }
+
+  cout << aux << endl;
+
+  for(auto it = passwords_.begin(); it != passwords_.end(); it++) {
+   cout << it -> first << ":" << " " << it->second.login << " and " << it->second.password << endl;
+  }
 }
 
 bool GooglePassword::validPassword(const std::string& password) const {
-  // TODO: Implemente este metodo
+
+    if (password.find("123456") != std::string::npos) {
+        return false;
+    }
+
+    if (password.length() > 50) {
+        return false;
+    }
+
+    if (password.length() < 6) {
+        return false;
+    }
+
+    for(int i= 0; i < password.length(); i++) {
+        if(password[i] == ' ') {
+            return false;
+        }
+    }
+
+    return true;
 }
 
