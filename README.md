@@ -1,1 +1,1 @@
-Alguns Exercícios de C++ que foram executados na disciplina de PDS II, durante minha graduação na Universidade Federal de Minas Gerais (UFMG)
+Alguns Exercícios de C++ que foram implementados na disciplina de PDS II(Programação e Desenvolvimento de Software 2), durante  o segundo período da minha graduação na Universidade Federal de Minas Gerais (UFMG)
