@@ -1,0 +1,4 @@
+https://cplusplus.com/doc/tutorial/classes/
+
+The scope operator (::, two colons), seen in relation to namespaces. Here it is used in the definition of function set_values to define a member of a class outside the class itself.
+
