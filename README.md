@@ -4,15 +4,13 @@ Bem-vindo ao diretório de exercícios da disciplina de Programação e Desenvol
 
 ### Estrutura do Diretório:
 
-    /ufmg_vpls_pds2/
+    /ufmg_pds2_exercicios/
 
 Este diretório é o local principal onde os exercícios estão organizados. Cada exercício possui sua própria pasta numerada, contendo todos os arquivos relacionados a ele.
 
-    /ufmg_vpls_pds2/vpl[Número do Exercício]/
+    /ufmg_pds2_exercicios/Exercise[Número do Exercício]/
 
 Cada pasta numerada contém os arquivos específicos do exercício em questão. Isso pode incluir códigos-fonte, recursos adicionais, bibliotecas e documentação relacionada.
-
-    /Exercícios/vpl[Número do Exercício]/README.md
 
 Cada pasta de exercício contém um arquivo README.md que fornece informações detalhadas sobre o exercício, incluindo uma descrição do problema, instruções para execução e, se necessário, dicas para sua solução.
 
